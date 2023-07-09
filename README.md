@@ -5,7 +5,17 @@ I try to make it the most documented as I can.
 
 # Documentation
 
-![alt text](https://github.com/rochdy0/ZMaison-API/blob/main/UML.png?raw=true)
+![alt text](https://github.com/rochdy0/ZMaison-API/blob/main/docs/UML.png?raw=true)
+
+##### Team Object
+
+Field | Type | Description |
+------------- | ------------- |  ------------- 
+id | String | the team's id
+name | String | the team's name
+channel_name | String | the Discord channel name
+channel_id | Number | the Discord channel id
+role_id | Number | the Discord role id
 
 ##### User Object
 
@@ -14,18 +24,10 @@ Field | Type | Description |
 id | String | the user's id
 username | String | the user's username
 avatar_url | String | the user's avatar URL
-maison_id | Number | the <a href="#maison-id">maison id</a> where the user is in
+team | <a href="#team-object">team object</a> | the team where the user is in
 arrival_date | String | the date when the user came in the challenge
 theme_objective? | String | the theme of the final season objective
 details_objective? | String | the details of the final season objective
-
-##### Maison Id
-
- Value | Description |
-------------- | -------------
-0 | Les fils de Ragnar
-1 | Les héritiers de Guillaume le conquérant
-2 | Les disciples d'Attila le hun
 
 ##### Grouped Stats Object
 
