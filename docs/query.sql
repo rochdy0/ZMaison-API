@@ -16,13 +16,13 @@ CREATE TABLE Team(
     teamId TINYINT NOT NULL,
     teamName varchar(255) NOT NULL,
     teamChannelName varchar(255) NOT NULL,
-    teamChannelId UNSIGNED BIGINT NOT NULL,
-    teamRoleId UNSIGNED BIGINT NOT NULL,
+    teamChannelId BIGINT UNSIGNED NOT NULL,
+    teamRoleId BIGINT UNSIGNED NOT NULL,
     CONSTRAINT pk_team_teamid PRIMARY KEY (teamId)
 );
 
 CREATE TABLE User(
-    userId UNSIGNED BIGINT NOT NULL,
+    userId BIGINT UNSIGNED NOT NULL,
     userName varchar(32) NOT NULL,
     teamId TINYINT NOT NULL,
     userArrivalDate DATE NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE User(
 CREATE TABLE Event(
     eventId TINYINT AUTO_INCREMENT NOT NULL,
     eventType TINYINT NOT NULL,
-    userId UNSIGNED BIGINT NOT NULL,
+    userId BIGINT UNSIGNED NOT NULL,
     eventPoints INT NOT NULL,
     eventtDate DATE NOT NULL,
     CONSTRAINT pk_event_eventid PRIMARY KEY (eventId),

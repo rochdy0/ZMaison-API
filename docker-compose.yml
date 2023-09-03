@@ -1,0 +1,14 @@
+version: "3"
+
+volumes:
+  ZMaisonMySqlVolume:
+    external: true
+    name: ZMaisonMySqlVolume
+
+services:
+  ZMaisonMySql:
+    volumes:
+      - ZMaisonMySqlVolume:/var/lib/mysql
+    image: mysql/mysql-server:8.0
+    ports:
+      - "3307:3306"

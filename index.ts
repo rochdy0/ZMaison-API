@@ -9,3 +9,8 @@ app.listen(port, () => {
   console.log(`ZMaisonAPI is running on port ${port}.`);
 });
 
+app.use('/v1/users', require('./src/routes/user.ts'))
+
+app.use((req, res) => {
+  res.status(404).send({error: "Not Found", message: ""})
+})
