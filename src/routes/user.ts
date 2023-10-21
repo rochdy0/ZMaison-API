@@ -1,7 +1,7 @@
 const router = require('express').Router()
-import getUserById from "../controllers/user"
+import {getUserById, postUser} from "../controllers/user"
 
-    console.log("test")
     router.get('/:id', getUserById)
+    router.post('/:id', postUser)
 
 module.exports = router;
