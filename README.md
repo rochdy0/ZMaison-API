@@ -7,6 +7,22 @@ I try to make it the most documented as I can.
 
 ![alt text](https://github.com/rochdy0/ZMaison-API/blob/main/docs/UML.png?raw=true)
 
+# Start the project
+
+```sh
+npm install #install dependencies
+docker-compose build #build the docker image for the local DB
+docker-compose up # run the container
+npm run serv
+```
+
+/!\ It's possible it fails on `missing volume`. Create first the volume with the correct name and rerun the `docker-compose up` command.
+
+# Test the API
+
+When the app is running, you can `curl` or use a tool like `Postman` to do calls on the API.
+Normally, your server is running on `localhost:4000`. You just have to test your routes and voilà!
+
 ##### Team Object
 
 Field | Type | Description |
